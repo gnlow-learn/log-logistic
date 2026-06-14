@@ -56,6 +56,9 @@ export class LogLogistic {
         const t = Math.pow(x/this.a, this.b)
         return t/(1+t)
     }
+    icdf(x: number) {
+        return this.a * Math.pow(p / (1 - p), 1 / this.b)
+    }
     static fromPeakMean(
         peak: number,
         mean: number,
